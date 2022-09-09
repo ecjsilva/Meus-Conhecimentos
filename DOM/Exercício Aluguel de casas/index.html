@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aluguel de casas</title>
+  </head>
+  <body>
+    <main>
+      <div id="container-form">
+        <form>
+          <h1>Cadastro</h1>
+          <p>
+            <label>Endereço :</label>
+            <input type="text" name="endereco" />
+          </p>
+          <p>
+            <label>Número :</label>
+            <input type="number" name="numero" min="0" />
+          </p>
+          <p>
+            <label>Bairro :</label>
+            <input type="text" name="bairro" />
+          </p>
+          <p>
+            <label>Cidade :</label>
+            <input type="text" name="cidade" />
+          </p>
+          <p>
+            <label>Tipo :</label>
+            <select name="type">
+              <option value="Casa">Casa</option>
+              <option value="Apartamento">Apartamento</option>
+            </select>
+          </p>
+          <p>
+            <label>Área m<sup>2</sup> :</label>
+            <input type="number" name="area" min="0" />
+          </p>
+          <p>
+            <label>Alugado :</label>
+            <input type="radio" name="locado" value="Sim" />Sim
+            <input type="radio" name="locado" value="Não" />Não
+          </p>
+          <p id="p-button-remove">
+            <button onclick="saveHouse()" type="button">Adicionar</button>
+          </p>
+        </form>
+      </div>
+    </main>
+
+    <h2>Imóveis cadastrados</h2>
+    <div id="container-ul">
+      <ul id="house-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
